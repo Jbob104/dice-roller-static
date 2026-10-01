@@ -1,0 +1,225 @@
+/*
+!!! ChatGPT Used to Generate this CSS file !!!
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #18181b;
+    color: #f4f4f5;
+}
+
+.container {
+    width: min(700px, 90%);
+    margin: auto;
+
+    text-align: center;
+}
+
+/* Header */
+
+header {
+    padding: 25px 30px;
+    margin-bottom: 20px;
+
+    border: 1px solid #3f3f46;
+    border-radius: 12px;
+
+    background: #27272a;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    margin: 0 0 10px;
+
+    font-size: 2.5rem;
+    color: #facc15;
+}
+
+header p {
+    margin: 0;
+
+    line-height: 1.5;
+    color: #d4d4d8;
+}
+
+/* Main input panel */
+
+.user-input {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+    padding: 25px;
+
+    border: 1px solid #3f3f46;
+    border-radius: 12px;
+
+    background: #27272a;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Dice selection */
+
+.dice-choice,
+.modifier {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 15px;
+
+    border: 1px solid #52525b;
+    border-radius: 10px;
+
+    background: #18181b;
+}
+
+.dice-choice label,
+.modifier label {
+    cursor: pointer;
+
+    padding: 8px 12px;
+
+    border-radius: 6px;
+
+    transition: background 0.15s, color 0.15s;
+}
+
+.dice-choice label:hover,
+.modifier label:hover {
+    background: #3f3f46;
+}
+
+/* Hide the default radio appearance */
+
+.dice-choice input,
+.modifier input {
+    accent-color: #facc15;
+}
+
+/* Dice count */
+
+.dice-count {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 15px;
+
+    border: 1px solid #52525b;
+    border-radius: 10px;
+
+    background: #18181b;
+}
+
+.dice-count input {
+    width: 100px;
+
+    padding: 10px;
+
+    border: 1px solid #52525b;
+    border-radius: 6px;
+
+    background: #27272a;
+    color: #f4f4f5;
+
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.dice-count input:focus {
+    outline: 2px solid #facc15;
+    border-color: transparent;
+}
+
+/* Run button */
+
+.run-dice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 15px;
+}
+
+#run-button {
+    width: 150px;
+
+    padding: 12px 20px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #facc15;
+    color: #18181b;
+
+    font-size: 1.1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: transform 0.1s, background 0.15s;
+}
+
+#run-button:hover {
+    background: #fde047;
+}
+
+#run-button:active {
+    transform: scale(0.96);
+}
+
+/* Result */
+
+.result {
+    margin-top: 20px;
+    padding: 25px;
+
+    border: 1px solid #3f3f46;
+    border-radius: 12px;
+
+    background: #27272a;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.result h2 {
+    margin: 0;
+}
+
+#result-id {
+    display: block;
+
+    font-size: 3.5rem;
+    font-weight: bold;
+
+    color: #facc15;
+}
+
+/* Mobile layout */
+
+@media (max-width: 600px) {
+    .user-input {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    #result-id {
+        font-size: 3rem;
+    }
+}
